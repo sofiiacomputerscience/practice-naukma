@@ -35,6 +35,21 @@ class RecipeDetailsPage(QWidget):
         self.image_label.setPixmap(recipe['image'])
         self.details_label.setText(recipe['details'])
 
+        # Add additional information labels here
+        self.add_info_label("Cooking Time:", recipe['cooking_time'])
+        self.add_info_label("Difficulty Level:", recipe['difficulty'])
+        self.add_info_label("Rating:", recipe['rating'])
+        self.add_info_label("Servings:", recipe['servings'])
+        self.add_info_label("Preparation Time:", recipe['preparation_time'])
+        self.add_info_label("Total Time:", recipe['total_time'])
+        self.add_info_label("Ingredients:", ", ".join(recipe['ingredients']))
+        self.add_info_label("Instructions:", recipe['instructions'])
+        # Add more information labels as needed
+
+    def add_info_label(self, label_text, info_text):
+        label = QLabel(f"{label_text} {info_text}", self)
+        self.layout.addWidget(label)
+
     def update_details(self, recipe_title):
         # Only demonstrative variant
         print(f"Displaying details for {recipe_title}")
@@ -43,4 +58,3 @@ class RecipeDetailsPage(QWidget):
 
     def go_back(self):
         self.main_window.stacked_layout.setCurrentIndex(0)
-
