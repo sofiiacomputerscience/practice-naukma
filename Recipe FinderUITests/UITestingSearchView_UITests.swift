@@ -24,7 +24,6 @@ final class UITestingSearchView_UITests: XCTestCase {
         
         //MARK: GIVEN
         let textField = app.scrollViews.otherElements.containing(.staticText, identifier:"Search recipe by name").children(matching: .textField).element
-        let searchLabel = app.scrollViews.otherElements.containing(.staticText, identifier:"Search recipe by name").element
         let cKey = app/*@START_MENU_TOKEN@*/.keys["C"]/*[[".keyboards.keys[\"C\"]",".keys[\"C\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         let aKey = app/*@START_MENU_TOKEN@*/.keys["a"]/*[[".keyboards.keys[\"a\"]",".keys[\"a\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         let eKey = app/*@START_MENU_TOKEN@*/.keys["e"]/*[[".keyboards.keys[\"e\"]",".keys[\"e\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
@@ -33,7 +32,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let returnButton = app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
         
         //MARK: WHEN
         textField.tap()
@@ -56,7 +55,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let pizzaButton = app.scrollViews.otherElements.buttons["Pizza"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
         
         //MARK: WHEN
         pizzaButton.tap()
@@ -73,7 +72,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let sandwichesButton = app.scrollViews.otherElements.buttons["Sandwiches"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
         
         //MARK: WHEN
         sandwichesButton.tap()
@@ -90,7 +89,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let soupsButton = app.scrollViews.otherElements.buttons["Soups"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
 
         //MARK: WHEN
         soupsButton.tap()
@@ -107,7 +106,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let pastaButton = app.scrollViews.otherElements.buttons["Pasta"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
 
         //MARK: WHEN
         pastaButton.tap()
@@ -124,7 +123,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let asianButton = app.scrollViews.otherElements.buttons["Asian"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
 
         //MARK: WHEN
         asianButton.tap()
@@ -141,7 +140,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let seafoodButton = app.scrollViews.otherElements.buttons["Seafood"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
 
         //MARK: WHEN
         seafoodButton.tap()
@@ -158,7 +157,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let saladButton = app.scrollViews.otherElements.buttons["Salad"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
 
         //MARK: WHEN
         saladButton.tap()
@@ -175,7 +174,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let dessertsButton = app.scrollViews.otherElements.buttons["Desserts"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
 
         //MARK: WHEN
         dessertsButton.tap()
@@ -192,7 +191,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let vegetarianButton = app.scrollViews.otherElements.buttons["Vegetarian"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
 
         //MARK: WHEN
         vegetarianButton.tap()
@@ -209,7 +208,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let drinksButton = app.scrollViews.otherElements.buttons["Drinks"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
 
         //MARK: WHEN
         drinksButton.tap()
@@ -226,7 +225,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let cocktailsButton = app.scrollViews.otherElements.buttons["Cocktails"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
 
         //MARK: WHEN
         cocktailsButton.tap()
@@ -243,7 +242,7 @@ final class UITestingSearchView_UITests: XCTestCase {
         let breakfastButton = app.scrollViews.otherElements.buttons["Breakfast"]
         let foundedRecipesViewNavigationBarBackButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Back"]
         let exists = NSPredicate(format: "exists == 1")
-        let expectation = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
+        let _ = self.expectation(for: exists, evaluatedWith: foundedRecipesViewNavigationBarBackButton, handler: nil)
 
         //MARK: WHEN
         breakfastButton.tap()
