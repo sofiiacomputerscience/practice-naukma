@@ -39,9 +39,31 @@ final class UITestingFavouritesView_UITests: XCTestCase {
     }
     
     func test_FavouritesViewActionShett_ShowsInfo() {
+        
+        //MARK: GIVEN
         let favouritesViewTab = app.tabBars["Tab Bar"].buttons["Favorites"]
         let favouritesNavigationBar = app.navigationBars["Favourites"]
         let defaultSortByButton = favouritesNavigationBar/*@START_MENU_TOKEN@*/.buttons["Sort by:, Added Time"]/*[[".otherElements[\"Sort by:, Added Time\"].buttons[\"Sort by:, Added Time\"]",".buttons[\"Sort by:, Added Time\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        let actionSheetCancelButton = app/*@START_MENU_TOKEN@*/.otherElements["Sort Recipes By:"].scrollViews/*[[".otherElements[\"Sort Recipes By:\"].scrollViews",".scrollViews"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.otherElements.buttons["Cancel"]
+        let actionSheetAddedTimeButton = app/*@START_MENU_TOKEN@*/.otherElements["Sort Recipes By:"].scrollViews/*[[".otherElements[\"Sort Recipes By:\"].scrollViews",".scrollViews"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.otherElements.buttons["Added Time"]
+        let actionSheetNameButton = app.otherElements["Sort Recipes By:"].scrollViews.otherElements.buttons["Name"]
+        let actionSheetCookingTimeButton = app.otherElements["Sort Recipes By:"].scrollViews.otherElements.buttons["Cooking Time"]
+        let actionSheetFatButton = app/*@START_MENU_TOKEN@*/.otherElements["Sort Recipes By:"].scrollViews/*[[".otherElements[\"Sort Recipes By:\"].scrollViews",".scrollViews"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.otherElements.buttons["Fat"]
+        let actionSheetCarbsButton = app/*@START_MENU_TOKEN@*/.otherElements["Sort Recipes By:"].scrollViews/*[[".otherElements[\"Sort Recipes By:\"].scrollViews",".scrollViews"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.otherElements.buttons["Carbs"]
+        let actionSheetProteinButton = app/*@START_MENU_TOKEN@*/.otherElements["Sort Recipes By:"].scrollViews/*[[".otherElements[\"Sort Recipes By:\"].scrollViews",".scrollViews"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.otherElements.buttons["Protein"]
+        
+        //MARK: WHEN
+        favouritesViewTab.tap()
+        defaultSortByButton.tap()
+        
+        //MARK: THEN
+        XCTAssertTrue(actionSheetCancelButton.exists)
+        XCTAssertTrue(actionSheetAddedTimeButton.exists)
+        XCTAssertTrue(actionSheetNameButton.exists)
+        XCTAssertTrue(actionSheetCookingTimeButton.exists)
+        XCTAssertTrue(actionSheetFatButton.exists)
+        XCTAssertTrue(actionSheetCarbsButton.exists)
+        XCTAssertTrue(actionSheetProteinButton.exists)
     }
     
     
